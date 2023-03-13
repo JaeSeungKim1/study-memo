@@ -1,0 +1,164 @@
+3/13
+
+선택자
+-> 요소, id class, 그룹, 전체(기본)/, 자식, 자손, 형태, 가상, 속성
+->tag, #, ., -, *, >, ?, ~ +, 가상(상태(;), 구조 / 요소(;;))
+			        link, visited, active/ before, after
+-> @import(외부에서 자원을 가져올때) - 
+	web pont, / CSS file(inline, external(외부), internal(내부)}
+
+boxing
+content->padding -> border -> margin
+
+layout
+ -> Table
+ -> css.float
+
+position -> static, relative(상대), absolute(절대), fixed(viewpoint), sticky
+			skicky(원래 자리에 있다가 돌아가는것?)
+
+@keyframe
+name ->
+duration -> 타임 프레임의 길이, 키프레임이 동작하는 시간 설정에 사용
+iteration- count -> 재생하는 횟수를 말함
+몇 퍼센트일 때 들어가야 할 색깔 입력
+#forward{alternate?? -> 왔다갔다하는 방식}
+#backward
+----------------------------------------------------------------------------
+UI(user interface)
+
+resize.
+
+outline-offset
+
+box-sizing -> 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성
+content-box ( 콘텐츠 영역을 기준 )
+border-box ( 테투리 기준)
+initial ( 기준값으로 설정 )
+inherit ( 부모 요소의 속성값을 상속 )
+
+CSS userInterface??
+
+
+column-count : 몇개의 컬럼으로 나뉠지 정한다.
+column-gap : 컬럼끼리의 간격을 정한다.
+column-rule-style : 컬럼의 경계선의 형식을 정한다.
+column-rule width : 컬럼의 경계선의 가로길이를 정한다
+column-rule-color : 컬럼의 경계선의 색을 정한다.
+column-rule : 위 column-rule 3개를 한번에 짧게 쓸수 있다.
+column-span : 컬럼위에 헤더와 같은 element가 몇 컬럼의 길이만큼 설정할
+지 정한다.
+
+flex container
+
+flex item
+
+flex - 한개 라인을 가지고 요소를 배열하는 것
+
+flex-direction - 스토리가 나열된 것을 메인축으로 설정(배치 방향 설정)
+   row -> 왼-> 오
+   row-reverse -> 반대로
+   column -> 위-> 아래로
+   column-reverse ->반대로
+
+wrap
+한줄에 담을 여유 공간이 없을 때 줄바꿈을 어떻게 할지 결정하는 것
+
+nowrap - 한줄에 다 표현
+wrap - 설정하기 나름? 
+wrap-reverse - 거꾸로
+
+justify-content(메인축 방향 정렬) 
+   flex-start -> 아이템들을 시작점으로 정렬
+   flex-end  -> 아이템들을 끝점으로 정렬
+   flex-center  -> 아이템들을 가운데로 정렬
+   space - around -> 앞뒤의 공백을 포함해서 균등하게 나눠준 것
+   space - between -> 총 공백에서 균등하게 가운데 공간을 만들어줌
+   space - evenly -> 모든 칸을 균등하게 나눠주는 것
+
+align-content(수직축 방향 정렬, 여러 행 정렬) 모든 것
+align-items (한줄일 때 하는 것)
+
+basis -> 기본 사이즈
+shrink -> container에 공간이 부족해질 때 축 방향 크기가 얼만 줄어들 수 있는지 지정하는 값
+grow -> 칸에 공간이 남았을 때 얼마만큼 크기 할당할지 결정하는 속성
+
+align-items : center;
+	#center{
+		justify-content : center;
+		align-items : center;
+-> 처음에 가운데로 문구 잡아주고 두번째 align에서 또 잡아줘 정중앙 위치
+
+flex-grow = 남은 공간의 여백을 박스 뒤에 얼만큼 붙여줄건지 설정하는 값
+flex-shrink -> 축방향 줄어들 수 있는지 지정하는 값
+
+flex
+ 1. 값이 한 개일 때
+   -> 단위가 없으면 flex-grow 값이 되고
+   -> 단위가 있으면 flex-basis 값이 됨
+  2. 값이 두 개일 때
+   -> 단위가 없는 숫자여야하고 값은 flex-grow
+   -> 값은 단위가 없으면 flex-shrink, 단위가 있거나 auto면 flex-basis
+  3. 값이 세 개일 때
+   -> 값 = flex-grow(단위 없아야 함)
+   -> 값 = flex-shrink(단위 없어야 함)
+   -> 값 = flex-basis(단위 있거나 auto여야함)
+align-self
+ -> 수직축 방향 정렬
+ -> 플레스 컨테이너의 align-items 속성보다 우선 적용
+
+order
+ -> 구조가 변하진 않지만 보여지는 순서만 바꿔주는 것
+     1,2,3
+     order:3, 1, 2
+      3,1,2 순으로 보여줌
+
+inherit ->부모 요소로부터 처음으로 상속받은 색을 사용
+initial -> 처음에 지정받은 색깔
+unset -> 부모로부터 상속할 값이 존재하면 상속값을 그렇지 않다면 초깃값 사용
+
+z - index
+ -> z축 정렬?
+
+grid??
+flex -> 한방향 레이 아웃
+gird -> 두방향 레이아웃
+
+grid-template-columns : 300px minmax(100px,1fr)????
+
+row+column=gap
+ ->row-gap:10px
+ ->column-gap:30px
+= gap: 3px 3px??
+
+grid-auto-rows : 100px (주로 많이 사용함)
+columns는 template를 사용함 auto는 잘 안씀
+
+grid-template-columns : repeat(auto fill, minmax(100px,1fr)
+grid-template-columns : repeat(auto-fit, minmax(100px,1fr)
+차이점??
+ -> 공간의 차이
+ -> auto fill은 내가 채울 수 있는 만큼 꽉 채워서 표현하고
+ -> auto fit은 공간에 맞게 일정하게 넣는 방식
+
+grid - auto-flow : column dense;
+-> 빈 공간없이 채우는 역할이 dense
+
+       .item:nth-child(7){order:3}
+        .item:nth-child(8){order:1}
+        .item:nth-child(9){order:2}
+  -> 7, 8, 9 -> 8, 9, 7
+
+아이템 그룹 가로 세로 정렬
+alig -content -> 세로(column) 방향 정렬
+justify-content -> 가로(row) 방향 정렬
+place-content -> 단축 속성 align-content, justify-contnt 작성
+값
+ -> stretch, start, center, end, space-between, space-around, space-evenly
+
+개별 아이템 가로 세로 정렬
+align-self -> 세로 방향 정렬(아이템 적용)
+justify-self -> 가로축 방향 정렬(아이템 적용)
+place-self -> align-self, justify-self의 순서로 자성
+값
+ -> stretch, start, center, end
